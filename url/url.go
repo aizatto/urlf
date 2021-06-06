@@ -30,6 +30,7 @@ func Parse(rawurl string) (*URL, error) {
 
 	newurl.Scheme = oldurl.Scheme
 	newurl.Username = oldurl.User.Username()
+	newurl.Password, _ = oldurl.User.Password()
 
 	host := oldurl.Host
 	index := strings.Index(host, ":")

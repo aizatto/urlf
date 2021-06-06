@@ -36,7 +36,7 @@ func TestUrlf(t *testing.T) {
 	)
 
 	assert.Equal(
-		"http user password example.com 443 /path query fragment",
+		"http user password example.com 420 /path query fragment",
 		musturlf("s u U h P p q f", "http://user:password@example.com:420/path?query#fragment"),
 		"Must match",
 	)
